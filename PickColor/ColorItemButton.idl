@@ -1,0 +1,12 @@
+// Copyright (c) Microsoft Corporation and Contributors.
+// Licensed under the MIT License.
+
+namespace PickColor
+{
+    [default_interface]
+    runtimeclass ColorItemButton : Microsoft.UI.Xaml.Controls.RadioButton
+    {
+        ColorItemButton();
+        Windows.UI.Color Color;
+    }
+}

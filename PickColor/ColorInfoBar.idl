@@ -1,0 +1,14 @@
+// Copyright (c) Microsoft Corporation and Contributors.
+// Licensed under the MIT License.
+
+namespace PickColor
+{
+    [default_interface]
+    runtimeclass ColorInfoBar : Microsoft.UI.Xaml.Controls.Grid
+    {
+        ColorInfoBar();
+
+        String TypeTitle;
+        UInt32 ColorDecimal;
+    }
+}

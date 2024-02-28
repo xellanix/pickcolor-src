@@ -1,0 +1,41 @@
+// Copyright (c) Microsoft Corporation and Contributors.
+// Licensed under the MIT License.
+
+namespace PickColor
+{
+    [default_interface]
+    runtimeclass ColorInfo : Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        ColorInfo();
+        ColorInfo(UInt32 decimal);
+
+        UInt32 ColorDecimal;
+    }
+    
+    [default_interface]
+    runtimeclass ColorViewModel
+    {
+        ColorViewModel();
+
+        ColorInfo ColorInfo{ get; };
+    }
+
+    [default_interface]
+    runtimeclass ColorItem
+    {
+        ColorItem();
+        ColorItem(UInt32 dec);
+
+        UInt32 Dec;
+        Windows.UI.Color Color{ get; };
+    }
+
+    [default_interface]
+    runtimeclass MainWindow : Microsoft.UI.Xaml.Window
+    {
+        MainWindow();
+
+        Windows.Foundation.Collections.IObservableVector<Object> ColorsHistory;
+        ColorViewModel ColorInfoViewModel{ get; };
+    }
+}
